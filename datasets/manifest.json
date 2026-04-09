@@ -1,0 +1,12 @@
+{
+  "name": "example-synthetic-rows",
+  "version": "0.1.0",
+  "description": "Dataset manifests point training publishers at storage locations or generators.",
+  "sources": [
+    {
+      "id": "inline-integers",
+      "kind": "synthetic",
+      "note": "Replace with Parquet/TFRecord/WebDataset URIs in real workloads."
+    }
+  ]
+}
