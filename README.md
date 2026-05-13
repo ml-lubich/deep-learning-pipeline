@@ -36,6 +36,7 @@ flowchart LR
 - [Quick start](#quick-start)
 - [License](#license)
 - [🗺️ Repository map](#️-repository-map)
+- [📊 Code composition](#-code-composition)
 
 ## Batch publish (sequence)
 
@@ -125,4 +126,18 @@ mindmap
       README_2.md
       README.md
       pyproject.toml
+```
+
+
+## 📊 Code composition
+
+File-type breakdown of source under this repo (skips `.git`, `node_modules`, build caches, lockfiles).
+
+```mermaid
+pie showData title File-type composition of deep-learning-pipeline (16 files)
+    "Python" : 11
+    "Markdown" : 2
+    "Other" : 1
+    "TOML" : 1
+    "JSON" : 1
 ```
