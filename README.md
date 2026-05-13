@@ -32,8 +32,33 @@ flowchart LR
 
 - [Layout](#layout)
 - [Architecture at a glance](#architecture-at-a-glance)
+- [Batch publish (sequence)](#batch-publish-sequence)
 - [Quick start](#quick-start)
 - [License](#license)
+
+## Batch publish (sequence)
+
+```mermaid
+sequenceDiagram
+    participant R as pipeline.runner
+    participant DS as datasets/
+    participant P as dataset_batch publisher
+    participant B as InMemoryBus
+    participant C as batch_collector
+    participant M as metrics / training
+
+    R->>P: subscribe(B)
+    R->>C: subscribe(B, topic="batch")
+    R->>DS: open manifest
+    loop per batch
+        P->>DS: read N samples
+        DS-->>P: tensor batch
+        P->>B: publish(Message{topic, payload})
+        B->>C: deliver(Message)
+        C->>M: log + forward to trainer
+    end
+    R->>B: close()
+```
 
 ## Layout
 
