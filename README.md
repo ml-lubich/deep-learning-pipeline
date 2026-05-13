@@ -35,6 +35,7 @@ flowchart LR
 - [Batch publish (sequence)](#batch-publish-sequence)
 - [Quick start](#quick-start)
 - [License](#license)
+- [🗺️ Repository map](#️-repository-map)
 
 ## Batch publish (sequence)
 
@@ -104,3 +105,24 @@ pytest
 ## License
 
 MIT
+
+
+## 🗺️ Repository map
+
+Top-level layout of `deep-learning-pipeline` rendered as a Mermaid mindmap (auto-generated from the on-disk tree).
+
+```mermaid
+mindmap
+  root((deep-learning-pipeline))
+    datasets/
+      manifest.json
+    src/
+      dl_pipeline
+    tests/
+      test_pipeline.py
+    files
+      LICENSE
+      README_2.md
+      README.md
+      pyproject.toml
+```
